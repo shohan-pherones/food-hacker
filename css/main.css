@@ -1,0 +1,106 @@
+:root {
+  --bg-color: rgb(245, 245, 245);
+  --transparent-bg-color: rgba(245, 245, 245, 0.5);
+  --headline-color: rgb(255, 122, 66);
+  --text-color: rgb(33, 36, 43);
+  --shadow-color: rgba(33, 36, 43, 0.1);
+  --button-color: rgb(217, 17, 74);
+  --hover-color: rgb(255, 118, 139);
+  --active-color: rgb(255, 221, 214);
+  --border-color: rgb(50, 184, 203);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  width: 100%;
+  height: 75px;
+  background-color: var(--transparent-bg-color);
+  box-shadow: 0 1px 5px var(--shadow-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  position: sticky;
+  top: 0;
+}
+
+.navbar .logo {
+  color: var(--headline-color);
+  cursor: pointer;
+}
+
+.navbar .logo span {
+  color: var(--text-color);
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  list-style: none;
+  padding: 0 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.1em;
+  position: relative;
+  transition: color 0.15s linear;
+}
+
+.menu li a:hover {
+  color: var(--headline-color);
+}
+
+.menu li a::after {
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  content: "";
+  width: 0%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--headline-color);
+  transition: width 0.15s linear;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.button:link,
+.button:visited {
+  text-decoration: none;
+  background-color: var(--border-color);
+  color: var(--bg-color);
+  font-size: 1.2em;
+  padding: 5px 25px;
+  border-radius: 20px;
+  transition: color 0.15s linear, background-color 0.15s linear,
+    box-shadow 0.15s linear;
+}
+
+.button:hover {
+  background-color: var(--hover-color);
+}
+
+.button:active {
+  background-color: var(--active-color);
+  color: var(--text-color);
+  box-shadow: inset 2px 2px 5px rgb(215, 188, 180),
+    inset -2px -2px 5px rgb(255, 240, 235);
+}
