@@ -1,0 +1,67 @@
+:root {
+  --bg-color: rgb(245, 245, 245);
+  --transparent-bg-color: rgba(245, 245, 245, 0.8);
+  --headline-color: rgb(255, 122, 66);
+  --text-color: rgb(33, 36, 43);
+  --shadow-color: rgba(33, 36, 43, 0.1);
+  --button-color: rgb(217, 17, 74);
+  --hover-color: rgb(255, 118, 139);
+  --active-color: rgb(255, 221, 214);
+  --border-color: rgb(50, 184, 203);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.contact h1 {
+  font-size: 3rem;
+  color: var(--headline-color);
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-fields input,
+.input-fields textarea {
+  width: 700px;
+  font-family: inherit;
+  font-size: 1.2em;
+  padding: 10px;
+  color: var(--text-color);
+  outline: none;
+  border: 2px solid var(--active-color);
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: all 0.2s linear;
+}
+
+.input-fields input[type="submit"] {
+  background-color: var(--hover-color);
+  border: none;
+  color: white;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+.input-fields input:nth-child(1):focus,
+.input-fields input:nth-child(2):focus,
+.input-fields textarea:focus {
+  border-color: var(--border-color);
+}
+
+.input-fields input[type="submit"]:hover {
+  background-color: var(--border-color);
+}
+
+.input-fields input[type="submit"]:active {
+  background-color: var(--button-color);
+}
