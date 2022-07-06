@@ -232,6 +232,51 @@ body {
   animation-play-state: paused;
 }
 
+.foods {
+  gap: 50px;
+  margin-bottom: 200px;
+}
+
+.foods-details {
+  width: 60%;
+}
+
+.foods-details h2 {
+  font-size: 15rem;
+  color: var(--shadow-color);
+}
+
+.foods-details h3 {
+  font-size: 3rem;
+  color: var(--headline-color);
+}
+
+.foods-details p {
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.foods-image {
+  width: 40%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.foods-image img {
+  width: 100%;
+}
+
+.pasta .foods-details h2,
+.pasta .foods-details h3 {
+  text-align: right;
+}
+
+.sandwich .foods-details h2,
+.sandwich .foods-details h3 {
+  text-align: right;
+}
+
 @keyframes slide {
   0% {
     transform: translateX(0);
